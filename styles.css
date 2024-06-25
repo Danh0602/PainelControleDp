@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #3498db;
+    background-color: #3498db;
+    color: white;
+    width: 100%; /* Ajustado para 100% para dispositivos móveis */
+    max-width: 200px; /* Limita a largura máxima em dispositivos maiores */
+    text-align: center;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 80px; /* Espaço para o menu suspenso fixo */
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Adicionado para espaçamento interno do formulário */
+}
+
+label {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 40px); /* Subtraído o padding do formulário para afastar da borda */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionamento vertical */
+    min-height: 100px; /* Define uma altura mínima */
+}
+
+button {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Espaçamento superior para o botão */
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 600px) {
+    select {
+        width: 100%;
+    }
+    
+    .content {
+        padding: 15px;
+    }
+    
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+        width: 100%;
+    }
+
+    form {
+        padding: 10px;
+    }
+}
