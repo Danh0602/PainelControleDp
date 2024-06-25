@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function fetchAndDisplayData(filename, type) {
-    const blobUrl = `https://htb01.blob.core.windows.net/<your-container-name>/${filename}`;
+    const blobUrl = `https://app03.blob.core.windows.net/app/${filename}?sp=racdl&st=2024-06-25T18:08:15Z&se=2024-06-26T02:08:15Z&sv=2022-11-02&sr=c&sig=wYOjEc18SyTtngpt8azsfOyTJX62x1xvq8MaNimHeqM%3D`;
     try {
         const response = await fetch(blobUrl);
         if (!response.ok) {
@@ -51,7 +51,7 @@ function formatData(data) {
                 // Trata os campos específicos que devem exibir "Vazio" se estiverem vazios
                 formattedData[key] = value || 'Vazio';
             } else if (value === null || value === undefined || value === '') {
-                // Se for nulo, indefinido ou vazio, mantém como está
+                // Correção: Use || para verificar se é nulo, indefinido ou vazio
                 formattedData[key] = value;
             } else {
                 // Caso contrário, mantém o valor original
