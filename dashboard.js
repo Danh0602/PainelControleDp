@@ -12,8 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function fetchAndDisplayData(filename, type) {
+    const blobUrl = `https://htb01.blob.core.windows.net/<your-container-name>/${filename}`;
     try {
-        const response = await fetch(filename);
+        const response = await fetch(blobUrl);
         if (!response.ok) {
             throw new Error('Erro ao buscar arquivo');
         }
